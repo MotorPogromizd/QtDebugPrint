@@ -4,7 +4,6 @@
 /**
  * @file
  * @brief File with epmty debug macros
- * @ingroup g_QtGit__Submodules__Debug__DebugOutput
  */
 
 #include <QDebug>

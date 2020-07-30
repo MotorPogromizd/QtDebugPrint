@@ -4,7 +4,6 @@
 /**
  * @file
  * @brief File with debug macros
- * @ingroup g_QtGit__Submodules__Debug__DebugOutput
  */
 
 #include <QDebug>
@@ -18,7 +17,6 @@
  *     "Object:: in %{file}:%{line}"
  *     );
  * @endcode
- * @ingroup g_QtGit__Submodules__Debug__DebugOutput
  */
 void setDebugMessagePattern();
 
