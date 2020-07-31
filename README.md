@@ -1,5 +1,6 @@
 # QtDebugPrint
-Clicable console messages printing support for Qt apps.  
+Clickable console messages printing support for Qt apps.
+
 Module adds short name `dbg` to print debugging output of app.  
 Use `dbg` macro in file and get clickable console message in Qt Creator
 ```
@@ -20,7 +21,7 @@ include(QtDebugPrint/QtDebugPrint.pri)
 ### Configure
 Configure QDebug messages. To do that add code below in main.cpp
 ```
-#include "DebugOutput/debugoutput.h"
+#include "QtDebugPrint/debugoutput.h"
         
 int main() {
     setDebugMessagePattern();
@@ -29,7 +30,7 @@ int main() {
 ### Use
 Then in every file in project you can use:
 ```
-#include "DebugOutput/debugoutput.h"
+#include "QtDebugPrint/debugoutput.h"
 /// ...
 dbg << "hello world";
 ```
@@ -45,31 +46,31 @@ DEFINES += RELEASE_DEBUG
 ```
 If you need release debug print in selected fle add this to this file:
 ```
-#include "DebugOutput/debugoutput_release.h"
+#include "QtDebugPrint/debugoutput_release.h"
 ```
 instead of
 ```
-#include "DebugOutput/debugoutput.h"
+#include "QtDebugPrint/debugoutput.h"
 ```
 ## Disable console print in file
 If you need disable debug print in selected file add this to this file:
 ```
-#include "DebugOutput/debugoutput_disabled.h"
+#include "QtDebugPrint/debugoutput_disabled.h"
 ```
 ## Use in headers
 When include debug headers in .h files add
 ```
-#include "DebugOutput/undefdebug.h"
+#include "QtDebugPrint/undefdebug.h"
 ```
 to end of ".h". Result must be
 ```
 // some_header.h
 #ifndef SOMEHEADER_H
 #define SOMEHEADER_H
-#include "DebugOutput/debugoutput.h"
+#include "QtDebugPrint/debugoutput.h"
 // ...some...
 // ...user...
 // ...code...
-#include "DebugOutput/undefdebug.h"
+#include "QtDebugPrint/undefdebug.h"
 #endif // SOMEHEADER_H
 ```
