@@ -7,3 +7,6 @@ HEADERS += \
 SOURCES += $$PWD/debugoutput.cpp
 
 OTHER_FILES += $$PWD/README.md
+
+
+INCLUDEPATH += $$PWD/..
